@@ -118,11 +118,12 @@ body {
 }
 
 @media (max-width: 768px) {
-    .projects {
+    .row {
         flex-direction: column;
     }
-
+    
     .projeto {
         width: 100%;
+        margin-right: 0;
     }
 }
