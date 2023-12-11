@@ -128,4 +128,13 @@ body {
         width: 100%;
         margin-right: 0;
     }
+    .cabecalho {
+        display: flex; /* Altera o layout para flexbox */
+        justify-content: center; /* Alinha os itens ao centro */
+        flex-wrap: wrap;
+    }
+
+    .cabecalho_nav {
+        margin: 10px;
+    }
 }
