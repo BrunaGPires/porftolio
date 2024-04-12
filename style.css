@@ -47,6 +47,10 @@ body {
     padding: 0rem 0.2rem 0rem 0.2rem;
 }
 
+.iconme{
+    border-radius: 50%;
+}
+
 .apresentacao{
     padding: 5% 15%;
     display: flex;
