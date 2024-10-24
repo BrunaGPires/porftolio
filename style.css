@@ -130,7 +130,7 @@ body {
     font-weight: 400;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 860px) {
     .row {
         width: 50%;
     }
