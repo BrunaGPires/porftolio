@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Simulador Snake Game</title>
+</head>
+<body>
+    <header>
+        <div class="cabecalho">
+            <div class="cabecalho_nav">
+                <a class="cabecalho__menu__link" href="index.html">Home</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="simulator-container">
+            <h3>Arduino Snake Game</h3>
+            <ul class="feature-list">
+                <li>Use the joystick to control the snake.</li>
+                <li>Push the center of the joystick to restart the game.</li>
+                <li>Avoid colliding with walls and your own body.</li>
+                <li>Colete até 10 pontos.</li>
+            </ul>
+            <div class="wokwi-container">
+                <iframe src="https://wokwi.com/arduino/projects/395979164601036801?view=diagram" allowfullscreen></iframe>
+            </div>
+
+            <div class="controls">
+                <button id="fullscreen-btn">Full Screen</button>
+                <button id="restart-btn">Restart Simulation</button>
+                <button id="code-btn">Code</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="rodape">
+        <img  height="90" src="https://64.media.tumblr.com/c49453f38ec3bf2b4c5c5aa98114666a/811bb4602f73a5e4-67/s500x750/7a8cf7f58153b99caafda584204c15a20a2c3be3.gifv" />
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const fullscreenBtn = document.getElementById('fullscreen-btn');
+            const restartBtn = document.getElementById('restart-btn');
+            const codeBtn = document.getElementById('code-btn');
+            const iframe = document.querySelector('iframe');
+            
+            fullscreenBtn.addEventListener('click', function() {
+                if (iframe.requestFullscreen) {
+                    iframe.requestFullscreen();
+                } else if (iframe.webkitRequestFullscreen) {
+                    iframe.webkitRequestFullscreen();
+                } else if (iframe.msRequestFullscreen) {
+                    iframe.msRequestFullscreen();
+                }
+            });
+            
+            restartBtn.addEventListener('click', function() {
+                iframe.src = iframe.src;
+            });
+            
+            codeBtn.addEventListener('click', function() {
+                window.open('https://wokwi.com/arduino/projects/395979164601036801', '_blank');
+            });
+        });
+    </script>
+</body>
+</html>
